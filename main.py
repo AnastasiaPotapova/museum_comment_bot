@@ -39,7 +39,9 @@ for event in longpoll.listen():
         post_id = comment['post_id']
 
         # Проверяем, есть ли цифры
-        if text.isdigit() and post_id == 8847:
+        if text.isdigit() and post_id == 9170:
             num = int(text)
             if 1<= num <= 10:
                 send_reply(comment_id, post_id, dt[num-1])
+            else:
+                send_reply(comment_id, post_id, "Чтобы пришло предсказание, пришлите, пожалуйста, номер от 1 до 10 ✨")
